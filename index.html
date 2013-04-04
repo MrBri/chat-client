@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chat with JSON!</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.2.0.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/template" class="">
+
+      <span class="user" data-name="<%= username %>"><%= username %></span><span class="message"><%= text %>
+      </span>
+
+    </script>
+  </head>
+  <body>
+
+    <div id="main" class="group">
+      <h1>Chat with JSON!</h1>
+
+      <form name="messageContainer" class="inputWin group">
+
+        <div class="usernameBox">
+          <input type="text" name="name" id="name" size="6" placeholder="Username"></input>
+        </div>
+
+        <div class="messageBox">
+          <input type="text" id="message" size="39" placeholder="Message"></input>
+          <input type="submit" class="button" style="position: absolute; left: -9999px"></input>
+        </div>
+
+        <div class="roomsAvailable">
+          <select name="rooms" id="rooms">
+            <option value="Default Room">Default Room</option>
+          </select>
+        </div>
+
+        <div class="createRoom">
+         <input type="text" name="room" size="39"placeholder="Create a Chat Room" id="room"></input>
+         <input type="submit" class="roomButton" style="position: absolute; left: -9999px"></input>
+        </div>
+
+      </form>
+
+      <div class="chatContainer">
+        <div class="nameWin">
+        </div>
+        <div class="messageWin"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
